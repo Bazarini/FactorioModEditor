@@ -1,6 +1,6 @@
-﻿namespace FactorioModEditor.Core.Entities
+﻿namespace FactorioModEditor.Core.Entities.Ingredient
 {
-    public abstract class Ingredient<T> : RecipeItemIOBase<T> where T : struct
+    public abstract class Ingredient<T> : RecipeItemIOBase<T>, IIngredient where T : struct
     {
         private double _amount;
 
@@ -12,13 +12,5 @@
         public double? MaximumTemperature { get => _maximumTemperature; set => _maximumTemperature = value; }
 
         public double? MinimumTemperature { get => _minimumTemperature; set => _minimumTemperature = value; }
-    }
-
-    public class FluidIngredient : Ingredient<double>, IIngredient
-    {
-    }
-
-    public class ItemIngredient : Ingredient<uint>, IIngredient
-    {
     }
 }

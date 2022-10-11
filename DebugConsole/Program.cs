@@ -2,6 +2,7 @@
 
 using FactorioModEditor.Core;
 using FactorioModEditor.Core.Entities;
+using FactorioModEditor.Core.Entities.Ingredient;
 using FactorioModEditor.Tools;
 
 LuaWriter Serializer = new LuaWriter(Console.Out);

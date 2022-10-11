@@ -1,4 +1,4 @@
-﻿namespace FactorioModEditor.Core.Entities;
+﻿namespace FactorioModEditor.Core.Entities.Ingredient;
 
 public interface IIngredient : IRecipeItemIOBase
 {

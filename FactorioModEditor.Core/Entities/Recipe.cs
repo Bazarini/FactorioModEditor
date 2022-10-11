@@ -1,4 +1,6 @@
-﻿using FactorioModEditor.Tools;
+﻿using FactorioModEditor.Core.Entities.Ingredient;
+using FactorioModEditor.Core.Entities.Product;
+using FactorioModEditor.Tools.Attributes;
 
 namespace FactorioModEditor.Core.Entities
 {

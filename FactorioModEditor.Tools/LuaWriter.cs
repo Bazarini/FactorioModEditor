@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FactorioModEditor.Tools.Attributes;
+using System.Collections;
 using System.Reflection;
 using System.Text;
 
@@ -6,22 +7,16 @@ namespace FactorioModEditor.Tools;
 
 public class LuaWriter
 {
-    private readonly Encoding _encoding;
-    private ushort _currentDepth = 0;
-    private SerializerOptions _serializerOptions;
+    private ushort _currentDepth;
+    private readonly SerializerOptions _serializerOptions;
     private StringBuilder _valueBuilder;
     private TextWriter _stream;
 
-    public LuaWriter(TextWriter stream, Encoding encoding)
+    public LuaWriter(TextWriter stream)
     {
         _valueBuilder = new StringBuilder();
         _serializerOptions = SerializerOptions.Default;
         _stream = stream;
-        _encoding = encoding;
-    }
-
-    public LuaWriter(TextWriter stream) : this(stream, Encoding.UTF8)
-    {
     }
 
     public void Write(object obj)

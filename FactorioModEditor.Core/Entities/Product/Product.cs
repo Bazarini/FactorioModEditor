@@ -1,8 +1,8 @@
-﻿using FactorioModEditor.Tools;
+﻿using FactorioModEditor.Tools.Attributes;
 
-namespace FactorioModEditor.Core.Entities
+namespace FactorioModEditor.Core.Entities.Product
 {
-    public abstract class Product<T> : RecipeItemIOBase<T> where T : struct
+    public abstract class Product<T> : RecipeItemIOBase<T>, IProduct where T : struct
     {
         private double? _amount;
         private double? _probability;
@@ -22,10 +22,4 @@ namespace FactorioModEditor.Core.Entities
 
         public double? Temperature { get => _temperature; set => _temperature = value; }
     }
-
-    public class FluidProduct : Product<double>
-    { }
-
-    public class ItemProduct : Product<uint>
-    { }
 }
